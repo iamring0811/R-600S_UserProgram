@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D115432E-C273-4ABF-9D41-E5B1CCDFEBB6}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UrineAnalyzer</RootNamespace>
+    <AssemblyName>UrineAnalyzer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <PropertyGroup>
+    <TargetZone>LocalIntranet</TargetZone>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>false</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>Properties\app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="DevExpress.Charts.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Data.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Diagram.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Office.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Printing.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.Spreadsheet.v20.1.Core, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.Utils.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraCharts.v20.1.UI, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraEditors.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraPrinting.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" />
+    <Reference Include="DevExpress.XtraReports.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="DevExpress.XtraSpreadsheet.v20.1, Version=20.1.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a, processorArchitecture=MSIL" />
+    <Reference Include="FTD2XX_NET, Version=1.0.6.0, Culture=neutral, PublicKeyToken=61a8105588f51b1f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\Debug\FTD2XX_NET.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="WindowsBase" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="DBConn.cs" />
+    <Compile Include="SerialConnect.cs" />
+    <Compile Include="USBConnect.cs" />
+    <Compile Include="Data.cs" />
+    <Compile Include="Frm_listset.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_listset.Designer.cs">
+      <DependentUpon>Frm_listset.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_manage.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_manage.Designer.cs">
+      <DependentUpon>Frm_manage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_login.Designer.cs">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Result.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Result.Designer.cs">
+      <DependentUpon>Frm_Result.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_User.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_User.Designer.cs">
+      <DependentUpon>Frm_User.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Frm_Main.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Main.Designer.cs">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Image.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Frm_Search.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Frm_Search.Designer.cs">
+      <DependentUpon>Frm_Search.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Frm_listset.resx">
+      <DependentUpon>Frm_listset.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_login.resx">
+      <DependentUpon>Frm_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Main.resx">
+      <DependentUpon>Frm_Main.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_manage.resx">
+      <DependentUpon>Frm_manage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Result.resx">
+      <DependentUpon>Frm_Result.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_User.resx">
+      <DependentUpon>Frm_User.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Frm_Search.resx">
+      <DependentUpon>Frm_Search.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\app.manifest" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK main edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_user_BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_result_BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_set_BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK user_EDIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_save_BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_search_BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_user_top_BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_result_top_BACK.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_set_top_BACK.png.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Resources\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_login_BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK result EDIT.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Btn_print_BACK.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK result EDITLLlast.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK graph EDIT TopX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK graph EDIT bntX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK result EDIT bntX.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK_Result.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK_Patient.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK_login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\BACK_list.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Debug\IMG\Back_Connect.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
